@@ -1,0 +1,295 @@
+build-apk	Set up job	﻿2026-06-22T21:40:18.7304953Z Current runner version: '2.335.1'
+build-apk	Set up job	2026-06-22T21:40:18.7327481Z ##[group]Runner Image Provisioner
+build-apk	Set up job	2026-06-22T21:40:18.7328203Z Hosted Compute Agent
+build-apk	Set up job	2026-06-22T21:40:18.7328697Z Version: 20260611.554
+build-apk	Set up job	2026-06-22T21:40:18.7329292Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+build-apk	Set up job	2026-06-22T21:40:18.7329897Z Build Date: 2026-06-11T21:40:46Z
+build-apk	Set up job	2026-06-22T21:40:18.7330499Z Worker ID: {b0d5d016-dad4-4282-b419-5e43f15e3a06}
+build-apk	Set up job	2026-06-22T21:40:18.7331107Z Azure Region: eastus2euap
+build-apk	Set up job	2026-06-22T21:40:18.7331614Z ##[endgroup]
+build-apk	Set up job	2026-06-22T21:40:18.7333035Z ##[group]Operating System
+build-apk	Set up job	2026-06-22T21:40:18.7333573Z Ubuntu
+build-apk	Set up job	2026-06-22T21:40:18.7334013Z 22.04.5
+build-apk	Set up job	2026-06-22T21:40:18.7334528Z LTS
+build-apk	Set up job	2026-06-22T21:40:18.7335013Z ##[endgroup]
+build-apk	Set up job	2026-06-22T21:40:18.7335520Z ##[group]Runner Image
+build-apk	Set up job	2026-06-22T21:40:18.7336020Z Image: ubuntu-22.04
+build-apk	Set up job	2026-06-22T21:40:18.7336739Z Version: 20260617.186.1
+build-apk	Set up job	2026-06-22T21:40:18.7337670Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20260617.186/images/ubuntu/Ubuntu2204-Readme.md
+build-apk	Set up job	2026-06-22T21:40:18.7339149Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20260617.186
+build-apk	Set up job	2026-06-22T21:40:18.7339935Z ##[endgroup]
+build-apk	Set up job	2026-06-22T21:40:18.7340927Z ##[group]GITHUB_TOKEN Permissions
+build-apk	Set up job	2026-06-22T21:40:18.7342825Z Contents: read
+build-apk	Set up job	2026-06-22T21:40:18.7343322Z Metadata: read
+build-apk	Set up job	2026-06-22T21:40:18.7343916Z Packages: read
+build-apk	Set up job	2026-06-22T21:40:18.7344385Z ##[endgroup]
+build-apk	Set up job	2026-06-22T21:40:18.7346661Z Secret source: Actions
+build-apk	Set up job	2026-06-22T21:40:18.7347443Z Prepare workflow directory
+build-apk	Set up job	2026-06-22T21:40:18.7629026Z Prepare all required actions
+build-apk	Set up job	2026-06-22T21:40:18.7660976Z Getting action download info
+build-apk	Set up job	2026-06-22T21:40:18.9678970Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build-apk	Set up job	2026-06-22T21:40:19.0417784Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+build-apk	Set up job	2026-06-22T21:40:19.1934274Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build-apk	Set up job	2026-06-22T21:40:19.4417694Z Complete job name: build-apk
+build-apk	Checkout repo (termasuk submodule kalau ada)	﻿2026-06-22T21:40:19.5088222Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5096062Z ##[group]Run actions/checkout@v4
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5096902Z with:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5097253Z   submodules: recursive
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5097667Z   fetch-depth: 0
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5098116Z   repository: annasdanayu-ctrl/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5102868Z   token: ***
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5103221Z   ssh-strict: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5103580Z   ssh-user: git
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5103942Z   persist-credentials: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5104356Z   clean: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5104733Z   sparse-checkout-cone-mode: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5105187Z   fetch-tags: false
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5105607Z   show-progress: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5105973Z   lfs: false
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5106519Z   set-safe-directory: true
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5107086Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5933547Z Syncing repository: annasdanayu-ctrl/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5935512Z ##[group]Getting Git version info
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5936622Z Working directory is '/home/runner/work/avian-electrum-wallet/avian-electrum-wallet'
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5937809Z [command]/usr/bin/git version
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5962710Z git version 2.54.0
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5977987Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5990035Z Temporarily overriding HOME='/home/runner/work/_temp/301dc249-dcbe-49aa-935d-2776cccb1377' before making global git config changes
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5991484Z Adding repository directory to the temporary git global config as a safe directory
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.5994280Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/avian-electrum-wallet/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6025039Z Deleting the contents of '/home/runner/work/avian-electrum-wallet/avian-electrum-wallet'
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6028489Z ##[group]Initializing the repository
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6031930Z [command]/usr/bin/git init /home/runner/work/avian-electrum-wallet/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6292132Z hint: Using 'master' as the name for the initial branch. This default branch name
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6293356Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6294361Z hint: to use in all of your new repositories, which will suppress this warning,
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6295463Z hint: call:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6296099Z hint:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6296748Z hint: 	git config --global init.defaultBranch <name>
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6297316Z hint:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6297821Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6298704Z hint: 'development'. The just-created branch can be renamed via this command:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6299766Z hint:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6300241Z hint: 	git branch -m <name>
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6301070Z hint:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6301660Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6302786Z Initialized empty Git repository in /home/runner/work/avian-electrum-wallet/avian-electrum-wallet/.git/
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6304828Z [command]/usr/bin/git remote add origin https://github.com/annasdanayu-ctrl/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6332934Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6333624Z ##[group]Disabling automatic garbage collection
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6336472Z [command]/usr/bin/git config --local gc.auto 0
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6369332Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6369966Z ##[group]Setting up auth
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6370653Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6399515Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6672343Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6701263Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6909145Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.6938699Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.7155810Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.7188847Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.7197123Z ##[group]Fetching the repository
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:19.7199033Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2313936Z From https://github.com/annasdanayu-ctrl/avian-electrum-wallet
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2315740Z  * [new branch]      main       -> origin/main
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2316971Z  * [new tag]         v0.5.2     -> v0.5.2
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2343317Z [command]/usr/bin/git branch --list --remote origin/main
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2365403Z   origin/main
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2373195Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2393361Z c69cac8175cf1c5d14327443342f2c5f0939940d
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2397444Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2398470Z ##[group]Determining the checkout info
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2399592Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2403050Z [command]/usr/bin/git sparse-checkout disable
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2435618Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2470046Z ##[group]Checking out the ref
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.2472602Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3086722Z Switched to a new branch 'main'
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3088449Z branch 'main' set up to track 'origin/main'.
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3096536Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3098598Z ##[group]Setting up auth for fetching submodules
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3101908Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3136813Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3162767Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3188470Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-246799856@github.com:
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3213550Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3215676Z ##[group]Fetching submodules
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3217474Z [command]/usr/bin/git submodule sync --recursive
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3422734Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --recursive
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3624384Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3825089Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3826851Z ##[group]Persisting credentials for submodules
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.3832132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4040845Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4263229Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4483597Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-246799856@github.com:'
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4699596Z ##[endgroup]
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4734361Z [command]/usr/bin/git log -1 --format=%H
+build-apk	Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:40:20.4756982Z c69cac8175cf1c5d14327443342f2c5f0939940d
+build-apk	Bersihkan disk runner	﻿2026-06-22T21:40:20.4959058Z ##[group]Run sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache
+build-apk	Bersihkan disk runner	2026-06-22T21:40:20.4961057Z ^[[36;1msudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache^[[0m
+build-apk	Bersihkan disk runner	2026-06-22T21:40:20.4962478Z ^[[36;1mdocker system prune -af^[[0m
+build-apk	Bersihkan disk runner	2026-06-22T21:40:20.4963325Z ^[[36;1mdf -h^[[0m
+build-apk	Bersihkan disk runner	2026-06-22T21:40:20.6203913Z shell: /usr/bin/bash -e {0}
+build-apk	Bersihkan disk runner	2026-06-22T21:40:20.6204887Z ##[endgroup]
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5510033Z Total reclaimed space: 0B
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5944436Z Filesystem       Size  Used Avail Use% Mounted on
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5944928Z /dev/root         73G   36G   38G  49% /
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5945424Z tmpfs            7.9G  172K  7.9G   1% /dev/shm
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5945800Z tmpfs            3.2G 1016K  3.2G   1% /run
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.5946166Z tmpfs            5.0M     0  5.0M   0% /run/lock
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.6003013Z efivarfs         128M   34K  128M   1% /sys/firmware/efi/efivars
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.6003466Z /dev/nvme0n1p15  105M  6.1M   99M   6% /boot/efi
+build-apk	Bersihkan disk runner	2026-06-22T21:41:19.6003891Z tmpfs            1.6G   12K  1.6G   1% /run/user/1001
+build-apk	Cache buildozer & gradle	﻿2026-06-22T21:41:19.6835834Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6837594Z ##[group]Run actions/cache@v4
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6837811Z with:
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6837987Z   path: .buildozer
+build-apk	Cache buildozer & gradle	~/.gradle
+build-apk	Cache buildozer & gradle	
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6838339Z   key: buildozer-Linux-3d33d92351a35c3849f5da4df9f3ed2d9be60ab41548bc901bf0accc2ccd7f49
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6838914Z   restore-keys: buildozer-Linux-
+build-apk	Cache buildozer & gradle	
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6839163Z   enableCrossOsArchive: false
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6839371Z   fail-on-cache-miss: false
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6839568Z   lookup-only: false
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6839739Z   save-always: false
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.6839924Z ##[endgroup]
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.7721426Z (node:2132) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.7722279Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build-apk	Cache buildozer & gradle	2026-06-22T21:41:19.8545009Z Cache not found for input keys: buildozer-Linux-3d33d92351a35c3849f5da4df9f3ed2d9be60ab41548bc901bf0accc2ccd7f49, buildozer-Linux-
+build-apk	Cari Dockerfile build Android di repo	﻿2026-06-22T21:41:19.8624231Z ##[group]Run echo "Mencari Dockerfile terkait Android build..."
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8624626Z ^[[36;1mecho "Mencari Dockerfile terkait Android build..."^[[0m
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8624977Z ^[[36;1mfind . -iname "Dockerfile*" | tee dockerfiles_found.txt^[[0m
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8625302Z ^[[36;1mif ! grep -q "contrib/android" dockerfiles_found.txt; then^[[0m
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8625796Z ^[[36;1m  echo "::warning::Tidak ditemukan Dockerfile di contrib/android/. Cek manual struktur repo (README, contrib/) sebelum lanjut."^[[0m
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8626230Z ^[[36;1mfi^[[0m
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8684174Z shell: /usr/bin/bash -e {0}
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8684448Z ##[endgroup]
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8754687Z Mencari Dockerfile terkait Android build...
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8790363Z ./dockerfiles_found.txt
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8790858Z ./contrib/android/Dockerfile
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8791192Z ./contrib/build-linux/sdist/Dockerfile
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8791492Z ./contrib/build-linux/appimage/Dockerfile
+build-apk	Cari Dockerfile build Android di repo	2026-06-22T21:41:19.8791749Z ./contrib/build-wine/Dockerfile
+build-apk	Build docker image untuk build APK	﻿2026-06-22T21:41:19.8827229Z ##[group]Run if [ -f contrib/android/Dockerfile ]; then
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8827572Z ^[[36;1mif [ -f contrib/android/Dockerfile ]; then^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8827914Z ^[[36;1m  docker build -t electrum-android-builder-img contrib/android/^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8828205Z ^[[36;1melse^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8828726Z ^[[36;1m  echo "::error::contrib/android/Dockerfile tidak ditemukan. Buka contrib/android/Readme.md repo ini di GitHub untuk cek nama/lokasi Dockerfile yang benar, lalu update step ini."^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8829281Z ^[[36;1m  exit 1^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8829446Z ^[[36;1mfi^[[0m
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8881670Z shell: /usr/bin/bash -e {0}
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:19.8881898Z ##[endgroup]
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2428339Z #0 building with "default" instance using docker driver
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2428871Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2428994Z #1 [internal] load build definition from Dockerfile
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2429257Z #1 transferring dockerfile: 7.13kB done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2429462Z #1 DONE 0.0s
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2429622Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2429752Z #2 [auth] library/ubuntu:pull token for registry-1.docker.io
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2430000Z #2 DONE 0.0s
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2430093Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.2430433Z #3 [internal] load metadata for docker.io/library/ubuntu:20.04@sha256:86ac87f73641c920fb42cc9612d4fb57b5626b56ea2a19b894d0673fd5b4f2e9
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4531956Z #3 DONE 0.4s
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4936896Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4937751Z #4 [internal] load .dockerignore
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4938821Z #4 transferring context: 2B done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4939282Z #4 DONE 0.0s
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4939436Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4939549Z #5 [internal] load build context
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4939883Z #5 transferring context: 2B done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4940189Z #5 DONE 0.0s
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4940353Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4942508Z #6 [11/23] RUN apt -y update -qq     && apt -y install -qq --no-install-recommends         python3         python3-dev         python3-pip         python3-setuptools         python3-venv         wget         lbzip2         patch         sudo         software-properties-common         git         zip         unzip         build-essential         ccache         autoconf         libtool         pkg-config         zlib1g-dev         libncurses5-dev         libncursesw5-dev         libtinfo5         cmake         libffi-dev         libssl-dev         automake         gettext         libltdl-dev     && apt -y autoremove     && apt -y clean
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4945230Z #6 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4945383Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4948262Z #7 [ 5/23] RUN curl --location --progress-bar         "https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip"         --output "commandlinetools-linux-8092744_latest.zip"     && echo "d71f75333d79c9c6ef5c39d3456c6c58c613de30e6a751ea0dbd433e8f8b9cbf commandlinetools-linux-8092744_latest.zip" | sha256sum -c -     && mkdir --parents "/opt/android/android-sdk"     && unzip -q "commandlinetools-linux-8092744_latest.zip" -d "/opt/android/android-sdk"     && mv "/opt/android/android-sdk/cmdline-tools" "/opt/android/android-sdk/tools"     && rm -rf "commandlinetools-linux-8092744_latest.zip"
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4951226Z #7 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4951362Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4952045Z #8 [ 6/23] RUN mkdir --parents "/opt/android/android-sdk/.android/"     && echo '### User Sources for Android SDK Manager'         > "/opt/android/android-sdk/.android/repositories.cfg"
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4952921Z #8 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4953059Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4953212Z #9 [13/23] RUN usermod -append --groups sudo user
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4953572Z #9 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4953707Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4953825Z #10 [15/23] WORKDIR /home/user/wspace
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4954145Z #10 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4954279Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4954397Z #11 [17/23] RUN chown user /opt
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4954716Z #11 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4954841Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4955341Z #12 [ 3/23] RUN apt -y update -qq     && apt -y install -qq --no-install-recommends curl unzip ca-certificates     && apt -y autoremove
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4956520Z #12 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4956651Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4957139Z #13 [ 8/23] RUN yes | /opt/android/android-sdk/tools/bin/sdkmanager --sdk_root=/opt/android/android-sdk --licenses > /dev/null
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4957827Z #13 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4957958Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4960347Z #14 [ 4/23] RUN curl --location --progress-bar         "https://dl.google.com/android/repository/android-ndk-r22b-linux-x86_64.zip"         --output "android-ndk-r22b-linux-x86_64.zip"     && echo "ac3a0421e76f71dd330d0cd55f9d99b9ac864c4c034fc67e0d671d022d4e806b android-ndk-r22b-linux-x86_64.zip" | sha256sum -c -     && mkdir --parents "/opt/android/android-ndk-r22b"     && unzip -q "android-ndk-r22b-linux-x86_64.zip" -d "/opt/android"     && ln -sfn "/opt/android/android-ndk-r22b" "/opt/android/android-ndk"     && rm -rf "android-ndk-r22b-linux-x86_64.zip"
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4962915Z #14 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4963049Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4963331Z #15 [16/23] RUN chown --recursive user /home/user/wspace /opt/android/android-sdk
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4963817Z #15 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4963954Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4965787Z #16 [ 9/23] RUN /opt/android/android-sdk/tools/bin/sdkmanager --sdk_root=/opt/android/android-sdk "platforms;android-30" > /dev/null &&     /opt/android/android-sdk/tools/bin/sdkmanager --sdk_root=/opt/android/android-sdk "build-tools;30.0.3" > /dev/null &&     /opt/android/android-sdk/tools/bin/sdkmanager --sdk_root=/opt/android/android-sdk "extras;android;m2repository" > /dev/null &&     chmod +x "/opt/android/android-sdk/tools/bin/avdmanager"
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4989492Z #16 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4989658Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4990147Z #17 [ 7/23] RUN apt -y update -qq     && apt -y install -qq --no-install-recommends         openjdk-11-jdk-headless     && apt -y autoremove
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4990837Z #17 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4990965Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4991162Z #18 [14/23] RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4991582Z #18 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4991709Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4991902Z #19 [12/23] RUN useradd --create-home --shell /bin/bash user
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4992540Z #19 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4992669Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4994594Z #20 [10/23] RUN curl --location --progress-bar         "https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz"         --output "apache-ant-1.9.4-bin.tar.gz"     && echo "66d3edcbb0eba11387705cd89178ffb65e55cd53f13ca35c1bb983c0f9992540 apache-ant-1.9.4-bin.tar.gz" | sha256sum -c -     && tar -xf "apache-ant-1.9.4-bin.tar.gz" -C "/opt/android"     && ln -sfn "/opt/android/apache-ant-1.9.4" "/opt/android/apache-ant"     && rm -rf "apache-ant-1.9.4-bin.tar.gz"
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4996971Z #20 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4997125Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4997575Z #21 [ 2/23] RUN apt update -qq > /dev/null && apt install -qq --yes --no-install-recommends     locales &&     locale-gen en_US.UTF-8
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4998237Z #21 CACHED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4998368Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.4998742Z #22 [18/23] COPY contrib/deterministic-build/requirements-build-base.txt /opt/deterministic-build/
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5003146Z #22 ERROR: failed to calculate checksum of ref 9c80eb07-e387-436c-aa39-81f43d8b85c3::vlrxiyqq216c1hu56lcwndwtj: "/contrib/deterministic-build/requirements-build-base.txt": not found
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5003944Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5004222Z #23 [19/23] COPY contrib/deterministic-build/requirements-build-android.txt /opt/deterministic-build/
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5005030Z #23 ERROR: failed to calculate checksum of ref 9c80eb07-e387-436c-aa39-81f43d8b85c3::vlrxiyqq216c1hu56lcwndwtj: "/contrib/deterministic-build/requirements-build-android.txt": not found
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5005544Z 
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5005805Z #24 [ 1/23] FROM docker.io/library/ubuntu:20.04@sha256:86ac87f73641c920fb42cc9612d4fb57b5626b56ea2a19b894d0673fd5b4f2e9
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5006612Z #24 resolve docker.io/library/ubuntu:20.04@sha256:86ac87f73641c920fb42cc9612d4fb57b5626b56ea2a19b894d0673fd5b4f2e9 done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5007678Z #24 sha256:86ac87f73641c920fb42cc9612d4fb57b5626b56ea2a19b894d0673fd5b4f2e9 943B / 943B done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5008399Z #24 sha256:7e0aa2d69a153215c790488ed1fcec162015e973e49962d438e18249d16fa9bd 3.31kB / 3.31kB done
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5009040Z #24 CANCELED
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5009195Z ------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5009520Z  > [18/23] COPY contrib/deterministic-build/requirements-build-base.txt /opt/deterministic-build/:
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5009872Z ------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5010008Z ------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5010307Z  > [19/23] COPY contrib/deterministic-build/requirements-build-android.txt /opt/deterministic-build/:
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5010655Z ------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5010828Z Dockerfile:149
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5010989Z --------------------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5011154Z  147 |     
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5011450Z  148 |     COPY contrib/deterministic-build/requirements-build-base.txt /opt/deterministic-build/
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5011975Z  149 | >>> COPY contrib/deterministic-build/requirements-build-android.txt /opt/deterministic-build/
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5012444Z  150 |     RUN python3 -m pip install --no-build-isolation --no-dependencies --user \
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5012816Z  151 |         -r /opt/deterministic-build/requirements-build-base.txt
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5013076Z --------------------
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5013776Z ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref 9c80eb07-e387-436c-aa39-81f43d8b85c3::vlrxiyqq216c1hu56lcwndwtj: "/contrib/deterministic-build/requirements-build-android.txt": not found
+build-apk	Build docker image untuk build APK	2026-06-22T21:41:20.5030413Z ##[error]Process completed with exit code 1.
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	﻿2026-06-22T21:41:20.5145132Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5146122Z Post job cleanup.
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5830342Z [command]/usr/bin/git version
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5861515Z git version 2.54.0
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5889623Z Temporarily overriding HOME='/home/runner/work/_temp/ac5968c4-a18b-46e0-9b74-cec371b3409d' before making global git config changes
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5890597Z Adding repository directory to the temporary git global config as a safe directory
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5893450Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/avian-electrum-wallet/avian-electrum-wallet
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5926617Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.5955488Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6162322Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6182891Z http.https://github.com/.extraheader
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6191912Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6219632Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6451807Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build-apk	Post Checkout repo (termasuk submodule kalau ada)	2026-06-22T21:41:20.6480850Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build-apk	Complete job	﻿2026-06-22T21:41:20.6804882Z Cleaning up orphan processes
+build-apk	Complete job	2026-06-22T21:41:20.7074584Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@v4, actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,3 +1,20 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -e
+
+# 1) Atur identitas git (sekali saja, dipakai untuk semua commit ke depannya)
+#    Ganti email di bawah dengan email asli kalau mau, ini cuma default aman.
+git config --global user.email "annasdanayu-ctrl@users.noreply.github.com"
+git config --global user.name "annasdanayu-ctrl"
+
+# 2) Fork repo ke akunmu & perbaiki remote "origin" agar mengarah ke fork
+#    (bukan ke repo resmi AvianNetwork yang tidak bisa kamu push)
+gh repo fork --remote
+
+# 3) Buat folder workflow kalau belum ada
+mkdir -p .github/workflows
+
+# 4) Tulis file workflow LANGSUNG dari Termux (tanpa perlu app editor lain)
+cat > .github/workflows/build-apk.yml << 'EOF'
 name: Build Avian Electrum Android APK
 
 # Dipicu manual (lewat tombol di GitHub, atau "gh workflow run" dari Termux)
@@ -64,7 +81,7 @@ jobs:
       - name: Build docker image untuk build APK
         run: |
           if [ -f contrib/android/Dockerfile ]; then
-            docker build -t electrum-android-builder-img -f contrib/android/Dockerfile .
+            docker build -t electrum-android-builder-img contrib/android/
           else
             echo "::error::contrib/android/Dockerfile tidak ditemukan. Buka contrib/android/Readme.md repo ini di GitHub untuk cek nama/lokasi Dockerfile yang benar, lalu update step ini."
             exit 1
@@ -73,13 +90,12 @@ jobs:
       - name: Jalankan build script di dalam docker
         run: |
           mkdir -p .buildozer/.gradle
-          chmod -R +x contrib/android/
-          chmod +x contrib/android/build.sh && docker run --rm \
+          docker run --rm \
             -v "${{ github.workspace }}":/home/user/wspace/electrum \
             -v "${{ github.workspace }}/.buildozer/.gradle":/home/user/.gradle \
             --workdir /home/user/wspace/electrum \
             electrum-android-builder-img \
-            bash ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
+            ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
 
       - name: Tampilkan hasil build
         run: |
@@ -93,3 +109,13 @@ jobs:
           path: dist/*.apk
           if-no-files-found: error
           retention-days: 14
+EOF
+
+# 5) Commit & push ke fork milikmu
+git add .github/workflows/build-apk.yml
+git commit -m "tambah workflow build APK"
+git push -u origin HEAD
+
+echo ""
+echo "Selesai. File workflow sudah ada di fork GitHub-mu."
+echo "Lanjut jalankan: gh workflow run build-apk.yml -f gui=kivy -f arch=arm64-v8a -f build_type=debug"
