@@ -64,7 +64,7 @@ jobs:
       - name: Build docker image untuk build APK
         run: |
           if [ -f contrib/android/Dockerfile ]; then
-            docker build -t electrum-android-builder-img contrib/android/
+            docker build -t electrum-android-builder-img -f contrib/android/Dockerfile .
           else
             echo "::error::contrib/android/Dockerfile tidak ditemukan. Buka contrib/android/Readme.md repo ini di GitHub untuk cek nama/lokasi Dockerfile yang benar, lalu update step ini."
             exit 1
