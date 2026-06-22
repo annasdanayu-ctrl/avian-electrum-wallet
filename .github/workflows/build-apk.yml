@@ -70,17 +70,15 @@ jobs:
             exit 1
           fi
 
-      - name: Jalankan build script di dalam docker
+- name: Jalankan build script di dalam docker
         run: |
           mkdir -p .buildozer/.gradle
-          chmod -R +x contrib/android/
-          chmod +x contrib/android/build.sh && docker run --rm \
+          docker run --rm \
             -v "${{ github.workspace }}":/home/user/wspace/electrum \
             -v "${{ github.workspace }}/.buildozer/.gradle":/home/user/.gradle \
             --workdir /home/user/wspace/electrum \
             electrum-android-builder-img \
             bash ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
-
       - name: Tampilkan hasil build
         run: |
           echo "Isi folder dist/:"
