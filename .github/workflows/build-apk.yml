@@ -73,7 +73,7 @@ jobs:
       - name: Jalankan build script di dalam docker
         run: |
           mkdir -p .buildozer/.gradle
-          docker run --rm \
+          chmod +x contrib/android/build.sh && docker run --rm \
             -v "${{ github.workspace }}":/home/user/wspace/electrum \
             -v "${{ github.workspace }}/.buildozer/.gradle":/home/user/.gradle \
             --workdir /home/user/wspace/electrum \
