@@ -78,7 +78,7 @@ jobs:
             -v "${{ github.workspace }}/.buildozer/.gradle":/home/user/.gradle \
             --workdir /home/user/wspace/electrum \
             electrum-android-builder-img \
-            ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
+            bash ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
 
       - name: Tampilkan hasil build
         run: |
