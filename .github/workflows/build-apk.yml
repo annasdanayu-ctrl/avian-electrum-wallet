@@ -1,0 +1,94 @@
+name: Build Avian Electrum Android APK
+
+# Dipicu manual (lewat tombol di GitHub, atau "gh workflow run" dari Termux)
+on:
+  workflow_dispatch:
+    inputs:
+      gui:
+        description: "GUI backend - cek contrib/android/Readme.md di repo ini untuk tahu mana yang dipakai (kivy untuk versi lama, qml untuk Electrum 4.4+)"
+        required: true
+        default: "kivy"
+      arch:
+        description: "Target arsitektur APK"
+        required: true
+        default: "arm64-v8a"
+        type: choice
+        options:
+          - arm64-v8a
+          - armeabi-v7a
+      build_type:
+        description: "Tipe build"
+        required: true
+        default: "debug"
+        type: choice
+        options:
+          - debug
+          - release-unsigned
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout repo (termasuk submodule kalau ada)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Bersihkan disk runner
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache
+          docker system prune -af
+          df -h
+
+      - name: Cache buildozer & gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            .buildozer
+            ~/.gradle
+          key: buildozer-${{ runner.os }}-${{ hashFiles('contrib/android/**') }}
+          restore-keys: |
+            buildozer-${{ runner.os }}-
+
+      - name: Cari Dockerfile build Android di repo
+        run: |
+          echo "Mencari Dockerfile terkait Android build..."
+          find . -iname "Dockerfile*" | tee dockerfiles_found.txt
+          if ! grep -q "contrib/android" dockerfiles_found.txt; then
+            echo "::warning::Tidak ditemukan Dockerfile di contrib/android/. Cek manual struktur repo (README, contrib/) sebelum lanjut."
+          fi
+
+      - name: Build docker image untuk build APK
+        run: |
+          if [ -f contrib/android/Dockerfile ]; then
+            docker build -t electrum-android-builder-img contrib/android/
+          else
+            echo "::error::contrib/android/Dockerfile tidak ditemukan. Buka contrib/android/Readme.md repo ini di GitHub untuk cek nama/lokasi Dockerfile yang benar, lalu update step ini."
+            exit 1
+          fi
+
+      - name: Jalankan build script di dalam docker
+        run: |
+          mkdir -p .buildozer/.gradle
+          docker run --rm \
+            -v "${{ github.workspace }}":/home/user/wspace/electrum \
+            -v "${{ github.workspace }}/.buildozer/.gradle":/home/user/.gradle \
+            --workdir /home/user/wspace/electrum \
+            electrum-android-builder-img \
+            ./contrib/android/build.sh "${{ github.event.inputs.gui }}" "${{ github.event.inputs.arch }}" "${{ github.event.inputs.build_type }}"
+
+      - name: Tampilkan hasil build
+        run: |
+          echo "Isi folder dist/:"
+          find dist -type f 2>/dev/null || echo "Folder dist/ tidak ada - build kemungkinan gagal, cek log step sebelumnya."
+
+      - name: Upload APK sebagai artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: avian-electrum-apk
+          path: dist/*.apk
+          if-no-files-found: error
+          retention-days: 14
